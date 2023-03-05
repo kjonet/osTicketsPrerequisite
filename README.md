@@ -31,8 +31,10 @@ To configure the installation, we’ll be using a series of files that will need
 
 <h3>Step 1:</h3>
 
-<p>Enable IIS (Internet Information Systems) through the programs applet within the control panel. Once there, select “Turn Windows features on or off”. Locat IIS, then locate and expand the Application Development Features that are nested in the World Wide Web services and select CGI. CGI is what will enable osTicket to operate off of PHP. 
+<p>Enable IIS (Internet Information Systems) through the programs applet within the control panel. Once there, click “Turn Windows features on or off”. Locat IIS, then locate and expand the Application Development Features that are nested in the World Wide Web services and select CGI. CGI is what will enable osTicket to operate off of PHP. 
 Once ISS is enabled, we can test this feature by typing in the loopback address 127.0.0.1 in the browser window. If you see the IIS home base, that is an indication the web server is running. </p>
+
+<a href="https://imgur.com/p059b86"><img src="https://i.imgur.com/p059b86.png" title="source: imgur.com" /></a>
 
 </br>
 
@@ -41,6 +43,8 @@ Once ISS is enabled, we can test this feature by typing in the loopback address 
 Next, download the PHP program files, named, “php-7.3.8-nts-Win32-VC15-x86.zip”
 Once downloaded, create a new directory named “PHP” on your C: drive. 
 Extract the contents of the zipped “php-7.3.8-nts-Win32-VC15-x86.zip” file and direct its continents to the newly created PHP folder. </p>
+
+<a href="https://imgur.com/wiv0kkK"><img src="https://i.imgur.com/wiv0kkK.png" title="source: imgur.com" /></a>
 
 </br>
 
@@ -61,8 +65,16 @@ During the installation of osTicket, you’ll want to select “Typical Setup”
 <h3>Step 5: </h3>
 
 <p>Go down to the search bar and open up IIS and run as an admin. To do that, right click on the service and select “Run as administrator”. Once on the home page, navigate to “PHP manager” 
-Inside the PHP Manager, you’ll need to select “Register PHP”, once open, navigate to the PHP folder we created in the C: drive earlier and select the “php-cgi” executable. 
-Restart the web server </p>
+ </br>
+    <a href="https://imgur.com/QfLFxCr"><img src="https://i.imgur.com/QfLFxCr.png" title="source: imgur.com" /></a>
+ </br>
+Inside the PHP Manager, you’ll need to select “Register PHP”, once open, navigate to the PHP folder we created in the C: drive earlier and select the “php-cgi” executable. </p>
+</br>
+<a href="https://imgur.com/Lu71So0"><img src="https://i.imgur.com/Lu71So0.png" title="source: imgur.com" /></a>
+</br>
+<a href="https://imgur.com/GuVg33p"><img src="https://i.imgur.com/GuVg33p.png" title="source: imgur.com" /></a>
+</br>
+<p>Restart the web server </p>
 
 
 <h3> Step 6: </h3>
@@ -70,16 +82,25 @@ Restart the web server </p>
 <p> Download OS ticket. Once downloaded, navigate to the OS ticket folder where it says “upload”. Extract and copy that folder over to “wwwroot” folder located in the C: drive. Path: C:\inetpub\wwwroot. Once the uploads folder has been placed inside, change rename the folder to “osTicket” </p>
 
 </br>
+<a href="https://imgur.com/vdPfDq4"><img src="https://i.imgur.com/vdPfDq4.png" title="source: imgur.com" /></a>
+
+
+</br>
 
 <h3>Step 7: </h3>
 
-<p>Go back to IIS, over in the left hand corner, navigat through the folders until you see the “osTicket”  folder. Once there, over on the right, click, “Browse *80” osTicket should load in the browser. 
-There are a few extensions we’ll need to enable. To do that, head back over to IIS, and select the PHP manager. Scroll to the bottom until you see “Enable or disable extensions” click it and enable the following:</p>
-</br>
+<p>Go back to IIS, over in the left hand corner, navigat through the folders until you see the “osTicket”  folder. Once there, over on the right, click, “Browse *80” osTicket should load in the browser. You should be directed to osTicket in your browser. </p>
 
+</br>
+<a href="https://imgur.com/t0v2XOC"><img src="https://i.imgur.com/t0v2XOC.png" title="source: imgur.com" /></a>
+
+<p>There are a few extensions we’ll need to enable. To do that, head back over to IIS, and select the PHP manager. Scroll to the bottom until you see “Enable or disable extensions” click it and enable the following:</p>
+</br>
+<p>
     - php_imap.dill </br>
     - php_intl. dill </br>
     - php_opcache. dill </br>
+</p>
 <p>Refresh the ticketing site and observe the changes.</p>
 
 <h3>Step 8:</h3>
@@ -106,3 +127,5 @@ Navigate to the “include” folder over in the osTicket folder and change file
 </br>
 
 <p>This completes the initial installation of osTicket! </p>
+
+<a href="https://imgur.com/Bw3ykc6"><img src="https://i.imgur.com/Bw3ykc6.png" title="source: imgur.com" /></a>
